@@ -1,15 +1,18 @@
-package com.stivizu.tutorial.spring.model;
+package com.stivizu.tutorial.spring.model.entity;
 
+import jakarta.persistence.Embeddable;
 import lombok.*;
 
 @Getter
 @Setter
 @Builder
+@Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
-public class Name {
+public class NameEntity {
 
     private String firstName;
+
     private String lastName;
 
 }
