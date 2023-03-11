@@ -55,6 +55,10 @@
             <version>${java-faker.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
@@ -62,6 +66,13 @@
     </dependencies>
 
     <build>
+        <resources>
+            <!-- Enable resource filtering -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <!-- Spring Boot Maven plugin -->
             <plugin>
