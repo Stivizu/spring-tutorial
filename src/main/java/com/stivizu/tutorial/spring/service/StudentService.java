@@ -17,7 +17,7 @@ public class StudentService {
 
     public Student getStudent(final long id) {
         return studentRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("There exists not student with id " + id + "!"));
+                .orElseThrow(() -> new RuntimeException("There exists no student with id " + id + "!"));
     }
 
     public List<Student> getStudentsWithAddressInCity(final String zipCode) {
